@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    gap: 20px;
+}
+.formgroup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 10px;
+    input {
+        width: 100%;
+    }
+}
+.actions {
+    width: 60px;
+}
+button {
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    border-radius: 10px;
+    outline: none;
+}

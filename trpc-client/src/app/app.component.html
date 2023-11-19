@@ -1,0 +1,9 @@
+<router-outlet
+(activate)="onActivate($event)"
+(deactivate)="onDeactivate($event)"></router-outlet>
+<button (click)="createHero()" *ngIf="!showOutlet">CREATE</button>
+<ng-container *ngIf="allHeroes$ | async as allHeroes">
+  <ng-container *ngFor="let hero of allHeroes">
+    <hero-card [hero]="hero" (deleteId)="handleDeleteId($event)"></hero-card>
+  </ng-container>
+</ng-container>

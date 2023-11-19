@@ -1,0 +1,20 @@
+<ng-container *ngIf="hero">
+<div class="info">
+    <div class="cell">
+        id: {{hero.id}}
+    </div>
+    <div class="cell">
+        name: {{hero.name}}
+    </div>
+    <div class="cell">
+        localized name: {{hero.localized_name}}
+    </div>
+    <div class="cell">
+        type: {{hero.type}}
+    </div>
+</div>
+<div class="actions">
+    <button (click)="edit(hero.id)">Edit</button>
+    <button (click)="delete(hero.id)">Delete</button>
+</div>
+</ng-container>

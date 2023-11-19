@@ -1,0 +1,24 @@
+<ng-container *ngIf="hero$ | async as hero">
+    <form [formGroup]="heroForm" (submit)="onSubmit()">
+        <div class="formgroup">
+            <label for="id">Id: </label>
+            <input id="id" type="text" [formControl]="idControl">
+        </div>
+        <div class="formgroup">
+            <label for="name">Name: </label>
+            <input id="name" type="text" [formControl]="nameControl">
+        </div>
+        <div class="formgroup">
+            <label for="localized_name">Localized name: </label>
+            <input id="localized_name" type="text" [formControl]="localizedNameControl">
+        </div>
+        <div class="formgroup">
+            <label for="type">Type: </label>
+            <input id="type" type="text" [formControl]="typeControl">
+        </div>
+        <div class="actions">
+            <button type="submit">OK</button>
+        </div>
+    </form>
+    <hr>
+</ng-container>
